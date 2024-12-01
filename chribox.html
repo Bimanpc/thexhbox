@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Chat Box</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f8fc url('https://images.unsplash.com/photo-1576238340713-976ef02e5d91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGNocmlzdG1hc3xlbnwwfHx8fDE2ODAxNTc4NjE&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .chat-box {
+      width: 350px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-header {
+      background: #e63946;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 1.5rem;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 15px;
+      background: #fefefe;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 10px;
+    }
+
+    .message .user {
+      font-weight: bold;
+    }
+
+    .message .text {
+      background: #f1f1f1;
+      border-radius: 10px;
+      padding: 10px;
+      display: inline-block;
+      margin-top: 5px;
+    }
+
+    .message .text.christmas {
+      background: #e1f8e8;
+      border: 1px solid #37b24d;
+    }
+
+    .chat-footer {
+      padding: 10px;
+      background: #f8f9fa;
+      display: flex;
+      gap: 10px;
+    }
+
+    .chat-footer input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .chat-footer button {
+      background: #37b24d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .chat-footer button:hover {
+      background: #2f9e44;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-box">
+    <div class="chat-header">
+      🎄 Merry Christmas Chat 🎅
+    </div>
+    <div class="chat-messages">
+      <div class="message">
+        <span class="user">Santa:</span>
+        <div class="text christmas">Ho Ho Ho! Merry Christmas!</div>
+      </div>
+      <div class="message">
+        <span class="user">You:</span>
+        <div class="text">Thanks, Santa! 🎁</div>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" placeholder="Type your message...">
+      <button>Send</button>
+    </div>
+  </div>
+</body>
+</html>
